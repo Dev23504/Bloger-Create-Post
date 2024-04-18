@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogger</title>
+    <link rel="stylesheet" href="B2.css">
+    <!-- <link rel="stylesheet" href="js.css"> -->
+    <link rel="shortcut icon" href="image/ic.webp" type="image/x-icon">
+    <style>
+
+      
+    </style>
+</head>
+<body>
+    <div class="Box">
+        <div class="First">
+            <div class="exp">
+                <div><h3>Blogger</h3></div>
+                 <div> <p>Explore,Image,Create</p></div>
+               
+            </div>
+            <div class="btn">
+                <button id="btn1">SignUp</button>
+                <button id="btn2"> SignIn</button>
+            </div>
+
+        </div>
+        <div class="second">
+      
+            <header>
+                <nav>
+                  <a href="">
+                    <button id="all"> <a href="all.html">All Post</a></button>
+                  </a>
+                  &nbsp; &nbsp; &nbsp;
+                  <a href="">
+                    <button id="create"><a href="create.html">Create Post</a>
+                    </button>
+                  </a>
+                </nav>
+              </header>
+      
+        </div>
+
+    </div>
+    <div id="myModal" class="modal">
+        
+
+      <!-- Modal content -->
+      
+     <div class="modal-content1">
+        <form class="signUp" id="signUp">
+            <span class="close">&times;</span>
+             <h1>SignUp</h1>
+             <!-- <label for="text"><b>UserName</b></label><br> -->
+             <input type="text" placeholder="Enter UserName" name="name" required id="signupUsername"><br>
+             <br>
+
+             <!-- <label for="email"><b>Email</b></label><br> -->
+             <input type="text" placeholder="Enter Email" name="email" required id="signupEmail"><br>
+             <br>
+
+             <!-- <label for="psw"><b>Password</b></label><br> -->
+             <input type="password" placeholder="Enter Password" name="psw" required id="signupPassword"><br>
+             <br>
+  
+              <!-- <label for="psw-repeat"><b>Confirm Password</b></label><br> -->
+              <input type="password" placeholder="Confirm Password" name="psw-repeat" required id="cp"><br><br>
+              <br>
+              <div class="clearfix">
+                <!-- <button type="button" id="calt" class="close">Cancel</button> -->
+                <input type="submit" id="SignUp" class="snb btn1" >
+               </div>
+        </form>
+    </div>
+  </div>
+
+ <div id="myModal2" class="modal2">
+      <!-- Modal content -->
+      <div class="modal-content2">
+         
+        <form class="signIn" id="signIn">
+              <span class="close2">&times;</span>
+              
+              <h1>SignIn</h1>
+  
+              <!-- <label for="email" id="email"><b>UserName</b></label><br> -->
+              <input type="text"  required id="signinUsername" placeholder="Username">
+              <br>
+              <br>
+  
+              <!-- <label for="psw"><b>Password</b></label><br> -->
+              <input type="password" placeholder="Enter Password" name="psw" required id="signinPassword"><br>
+                <br>
+
+          
+              <div class="clearfix2">
+                  <!-- <button type="button" id="calt" class="close2">Cancel</button> -->
+                 <input type="submit" class="snb "  id="SignIn">
+              </div>
+        </form>
+        
+      </div>
+    </div>
+
+    </div>
+</body>
+
+<script src="Bloger.js"></script>
+
+<script>
+  // signUp
+  const myForm =document.getElementById("myModal")
+        console.log(myForm)
+    
+        myForm.addEventListener('submit',saveData)
+        
+        function saveData(e){
+            e.preventDefault()
+            const userName = document.getElementById("signupUsername").value;
+            const email = document.getElementById("signupEmail").value;
+            const password = document.getElementById("signupPassword").value;
+            const confirmPassword = document.getElementById('cp').value;
+            
+
+            if (password !== confirmPassword) {
+            alert('Passwords do not match. Please enter matching passwords.');
+            return;
+             }
+
+           
+            const data ={
+                userName : userName,
+                Email : email,
+                password : password,
+                cp : confirmPassword 
+            }
+            console.log(data)
+
+    
+            
+
+            var userDetails =JSON.stringify(data);
+
+            localStorage.setItem('saveData',userDetails)
+
+             
+             
+
+            alert("SignUp successful")
+
+            document.getElementById("signUp").reset();;
+        }
+    
+
+        
+//   SignIn
+       document.getElementById('myModal2')
+    
+
+        .addEventListener('submit',function(event){
+        event.preventDefault()                
+        const userName = document.getElementById("signinUsername").value;
+        const password = document.getElementById("signinPassword").value;
+
+        var userDetails=JSON.parse(localStorage.getItem('saveData'))
+        console.log(userDetails)
+
+        if (userName !== userDetails.userName) {
+            alert("invaild username")
+            return;
+        }
+        if (password !== userDetails.password) {
+            alert("invaild password")  
+            return;
+            }
+            
+                alert("SignIn successful")
+            
+
+
+             document.getElementById("signIn").reset();
+
+
+     })
+</script>
+
+</html>

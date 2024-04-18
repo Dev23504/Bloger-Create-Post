@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogger</title>
+    <link rel="shortcut icon" href="ic.webp" type="image/x-icon">
+    <style>
+         body{
+            /* background-image: url(all.jpg); */
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+        }
+        #container{
+           
+            height: 100%;
+            width: 50%;
+            background-image: url(image/all.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            text-align: center;
+        }
+        h2{
+            color: blanchedalmond;
+        }
+        button{
+            width: 20%;
+            height: 40px;
+            background-color: khaki;
+            border-radius: 20px;
+        }
+        a{
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <a href="Bloger.html">
+        <button id="all"> <a href="Index.html">Back</a></button><br>
+      </a>
+      
+
+     
+    <div id="container">
+        <h2>All Post</h2>
+        <div id="container">
+
+        </div>
+      </div>
+    
+</body>
+
+<script>
+    function displaySavedData() {
+      const savedData = JSON.parse(localStorage.getItem("savedData"));
+     
+      const Container = document.getElementById("container");
+
+      if (savedData.length > 0) {
+        savedData.forEach(function(data) {
+            const dataDiv = document.createElement("div");
+            const Name = document.createElement("p");
+            const Place = document.createElement("p");
+            
+            const Image = document.createElement("img");
+            const Description = document.createElement("p");
+            const Hr = document.createElement("hr");
+  
+
+          Name.textContent = "Name: " + data.Name;
+          Name.style.color="white"
+          Place.textContent = "Place: " + data.Place;
+          Place.style.color="white"
+          Description.textContent = "Description: " + data.Description;
+          Description.style.color="white"
+          Image.src = data.Url;
+          Image.style.maxWidth = "200px";
+
+          dataDiv.append(Name, Place,Image, Description,Hr);
+
+          Container.appendChild(dataDiv);
+        });
+      } else {
+        Container.innerHTML = "<p>No saved data found.</p>";
+      }
+    }
+//localStorage.clear()
+    displaySavedData();
+  </script>
+</html>

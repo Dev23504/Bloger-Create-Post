@@ -1,0 +1,289 @@
+.Box{
+  /*border: solid red;*/
+    height: 600px;
+}
+h1{
+    color: bisque;
+}
+label{
+    color: darkgray
+}
+
+
+.First{
+    /*border: solid red;*/
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    background-image: url(image/Fpage.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    flex-wrap: wrap;
+}
+p{
+  color: white;
+}
+h3{
+  color: white;
+
+}
+
+
+.exp{
+   /* border: solid red; */
+    height: 100px;
+    flex-wrap: wrap;
+}
+.btn{
+    /*border: solid red;*/
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+     flex-wrap: wrap;
+
+
+}
+
+#btn1{
+   
+    height: 30px;
+    border-radius:10px ;
+    background-color: antiquewhite;
+    
+   
+}
+#btn2{
+   
+    height: 30px;
+    border-radius:10px ;
+    background-color: antiquewhite;
+    
+   
+}
+
+.second{
+    /*border: solid red;*/
+    height: 650px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
+    background-image: url(image/Fpage.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+#all{
+    height: 30px;
+    border-radius:10px ;
+    background-color: antiquewhite;
+}
+
+#create{
+    height: 30px;
+    width: 100px;
+    border-radius:10px ;
+    background-color: antiquewhite;
+}
+a{
+    text-decoration: none;
+}
+
+
+/* #SignUp */
+body {font-family: Arial, Helvetica, sans-serif;}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+.signUp{
+     height: 100%;
+     width: 100%;
+      
+}
+/* Modal Content */
+.modal-content1 {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border-radius: 20px;
+  border: 1px solid #888;
+  width: 30%;
+  height: 60%;
+  display: flex;
+  justify-content: center;
+  background-image: url(image/signup.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+}
+input{
+  width: 50%;
+  height: 30px;
+}
+
+/* The Close Button */
+.close {
+  color: blue;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+button:hover {
+    opacity:1;
+  }
+  
+  /* Extra styles for the cancel button */
+  #calt{
+   
+    background-color: #f44336;
+    font-size: small;
+    color: #000;
+    
+  
+  }
+  
+  /* Float cancel and sign buttons and add an equal width */
+  #calt, .snb {
+    float: left;
+    width: 60%;
+    height: 20%;
+    border-radius: 10px;
+  }
+  
+  /* Add padding to container elements */
+  .container {
+    padding: 16px;
+  }
+  .clearfix{
+    width: 100%;
+    /* border: solid; */
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  /* Clear floats */
+  .clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+  .modal2{
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  .signIn{
+       height: 100%;
+       width: 100%;
+        
+  }
+  /* Modal Content */
+  .modal-content2 {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 30%;
+    border-radius: 20px;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    background-image: url(image/signup.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+  }
+  
+  /* The Close Button */
+  .close2 {
+    color:blue;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close2:hover,
+  .close2:focus {
+    color: red;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  button:hover {
+      opacity:1;
+    }
+    
+    /* Extra styles for the cancel button */
+    #calt{
+     
+      background-color: #f44336;
+      font-size: small;
+      color: #000;
+      
+    
+    }
+    
+    /* Float cancel and sign buttons and add an equal width */
+    #calt, .snb {
+      float: left;
+      width: 60%;
+      height: 20%;
+      border-radius: 10px;
+    }
+    
+    /* Add padding to container elements */
+    .container {
+      padding: 16px;
+    }
+    .clearfix2{
+      width: 100%;
+      /* border: solid; */
+      display: flex;
+      justify-content: space-around;
+    }
+    
+    /* Clear floats */
+    .clearfix2::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+
+    .snb{
+      width: 30%;
+      
+      margin-left: 20%;
+      height: 35px;
+    }
