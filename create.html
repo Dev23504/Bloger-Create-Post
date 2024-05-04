@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Create Post</title>
+    <link rel="shortcut icon" href="image/ic.webp" type="image/x-icon">
 
     <style>
         body{
@@ -121,10 +122,12 @@
       saveData.push(data);
       localStorage.setItem("savedData", JSON.stringify(saveData));
       alert("Data is saved!");
+      document.getElementById("dataForm").reset();
     }
+    
 
    
-
-   //JSON.parse(localStorage.getItem('savedData'))||
+  
+   
 
   </script>

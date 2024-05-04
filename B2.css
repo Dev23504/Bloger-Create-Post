@@ -1,6 +1,12 @@
+body{
+  background-image: url(image/Fpage.png);
+  background-repeat: no-repeat;
+    background-size: cover;
+    
+}
 .Box{
-  /*border: solid red;*/
-    height: 600px;
+  /* border: solid red; */
+    height: 800px;
 }
 h1{
     color: bisque;
@@ -16,6 +22,7 @@ label{
     display: flex;
     justify-content: space-between;
     background-image: url(image/Fpage.png);
+    
     background-repeat: no-repeat;
     background-size: cover;
     flex-wrap: wrap;
@@ -65,12 +72,12 @@ h3{
 
 .second{
     /*border: solid red;*/
-    height: 650px;
+    height: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     justify-content: center;
-    background-image: url(image/Fpage.png);
+    /* background-image: url(image/Fpage.png); */
     background-repeat: no-repeat;
     background-size: cover;
 }
