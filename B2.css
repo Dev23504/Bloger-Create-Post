@@ -336,7 +336,7 @@ button:hover {
   .modal-content1 {
     /* background-color: lightblue; */
     width: 60%;
-    height: 80%;
+    height: 50%;
   }
 
   .modal-content2 {
@@ -347,7 +347,7 @@ button:hover {
   .login{
     /* border: solid; */
     width: 100%;
-    height: 50px;
+    height: 70%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -369,5 +369,6 @@ button:hover {
     height: 20%;
     border-radius: 10px;
   
+    
 
 }}
